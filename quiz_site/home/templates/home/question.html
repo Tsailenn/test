@@ -1,0 +1,22 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            {{ question }}
+        </div>
+        <form method='POST'>
+            {% csrf_token %}
+            {% for i in answers %}
+                <input type='checkbox' id='{{ i.id }}' name= 'n{{ i.id }}' value= 'clicked'>
+                <label for='{{ i.id }}'>{{ i.answer }}</label><br>
+            {% endfor %}
+            <button type='submit'> Next </button>
+            <!--
+                next page if not done
+                home page if done
+            -->
+        </form>
+    </body>
+</html>

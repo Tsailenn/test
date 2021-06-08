@@ -1,0 +1,17 @@
+<html>
+    <head>
+        {% block site_name %}
+        {% endblock %}
+    </head>
+    <body>
+        <h1>
+            Welcome {{ name }}
+        </h1>
+        <!-- 
+            logged in: quick picker and logout pages
+            logged out: register and login pages
+         -->
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

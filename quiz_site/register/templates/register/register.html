@@ -1,0 +1,16 @@
+<html>
+    <head>
+        Register
+    </head>
+    <!--
+        MISSING LEAD TO LOGIN
+    -->
+    <body>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <p>Login <a href="/login">here</a></p>
+            <button type="submit">Register</button>
+        </form>
+    </body>
+</html>
